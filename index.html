@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f1ead8">
+  <meta name="description" content="A free, printable four-week chore rota. Add people and chores, then make a fair plan in your browser.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src https://cloud.umami.is https://gateway.umami.is; script-src 'self' https://cloud.umami.is; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src data:; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>RotaLantern | Make the week lighter</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231d5c47'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-size='45' fill='%23faf6ea' font-family='Georgia'%3ER%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="f4eec126-ccce-4c61-96ab-bdb6d21688a3" data-domains="zaimimr.github.io" data-do-not-track="true" data-exclude-search="true" data-exclude-hash="true"></script>
+</head>
+<body>
+  <header class="masthead"><a class="brand" href="#top"><span class="brand-symbol" aria-hidden="true">R</span>RotaLantern</a><span class="masthead-note">A little order for shared homes</span></header>
+  <main id="top">
+    <section class="hero" aria-labelledby="title">
+      <div class="hero-copy"><span class="folio">FREE HOUSEHOLD TOOL / ISSUE 01</span><h1 id="title">One list.<br><em>Four weeks.</em><br>Everyone takes a turn.</h1><p>Put the names and chores in once. Get a printable rota that rotates the work each week. No account, no subscription, no names or chores sent from your browser.</p><a class="text-link" href="#maker">Make your rota <span aria-hidden="true">↘</span></a></div>
+      <div class="hero-art" aria-hidden="true"><div class="art-shadow"></div><div class="art-sheet"><span class="art-week">WEEK 01</span><div class="art-rule"></div><div class="art-row"><span>KITCHEN</span><b>Alex</b></div><div class="art-row"><span>BATHROOM</span><b>Sam</b></div><div class="art-row"><span>FLOORS</span><b>Alex</b></div><div class="art-rule"></div><span class="art-end">PASS IT ON NEXT WEEK</span></div><div class="art-seal">FAIR<br>BY<br>DESIGN</div></div>
+    </section>
+    <section id="maker" class="maker" aria-labelledby="maker-title">
+      <div class="section-heading"><span class="section-number">01 / THE INPUT</span><h2 id="maker-title">What needs doing?</h2><p>Start with a few chores. Change the list and make a fresh plan any time.</p></div>
+      <form id="rota-form" novalidate>
+        <div class="fields"><div class="field"><label for="people">People in the rota</label><span class="field-hint">Separate names with commas. Up to eight people.</span><input id="people" name="people" type="text" maxlength="640" value="Alex, Sam" autocomplete="off" required></div><div class="field"><label for="chores">Chores to share</label><span class="field-hint">One chore per line. Up to thirty chores.</span><textarea id="chores" name="chores" rows="6" maxlength="2430" required></textarea></div><div class="field date-field"><label for="week">First week</label><span class="field-hint">We will start on the Monday of this week.</span><input id="week" name="week" type="date" required></div></div>
+        <div class="form-bottom"><button class="primary-button" type="submit">Make the four-week rota <span aria-hidden="true">→</span></button><p class="form-error" id="form-error" role="alert"></p></div>
+      </form>
+    </section>
+    <section class="result" id="result" aria-labelledby="result-title" hidden>
+      <div class="section-heading"><span class="section-number">02 / THE OUTPUT</span><h2 id="result-title">Your rota is ready.</h2><p>Each week shifts the assignments. Print it, pin it up, and change the list whenever life changes.</p></div>
+      <div class="result-actions"><button type="button" id="print" class="secondary-button" data-umami-event="print-rota">Print the rota</button><button type="button" id="download" class="secondary-button" data-umami-event="download-csv">Download CSV</button></div>
+      <div class="weeks" id="weeks"></div>
+    </section>
+  </main>
+  <footer><span>RotaLantern</span><p>Visits and print or download actions are counted. Names and chores stay in this browser tab.</p><a href="#top">Back to top ↑</a></footer>
+  <script src="app.js"></script>
+</body>
+</html>
