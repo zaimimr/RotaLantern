@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f1ead8">
   <meta name="description" content="A free, printable four-week chore rota. Add people and chores, then make a fair plan in your browser.">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src data:; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src https://cloud.umami.is; script-src 'self' https://cloud.umami.is; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src data:; object-src 'none'; base-uri 'none'; form-action 'none'">
   <title>RotaLantern | Make the week lighter</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231d5c47'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-size='45' fill='%23faf6ea' font-family='Georgia'%3ER%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css">
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="f4eec126-ccce-4c61-96ab-bdb6d21688a3" data-domains="zaimimr.github.io" data-do-not-track="true" data-exclude-search="true" data-exclude-hash="true"></script>
 </head>
 <body>
   <header class="masthead"><a class="brand" href="#top"><span class="brand-symbol" aria-hidden="true">R</span>RotaLantern</a><span class="masthead-note">A little order for shared homes</span></header>
@@ -26,11 +27,11 @@
     </section>
     <section class="result" id="result" aria-labelledby="result-title" hidden>
       <div class="section-heading"><span class="section-number">02 / THE OUTPUT</span><h2 id="result-title">Your rota is ready.</h2><p>Each week shifts the assignments. Print it, pin it up, and change the list whenever life changes.</p></div>
-      <div class="result-actions"><button type="button" id="print" class="secondary-button">Print the rota</button><button type="button" id="download" class="secondary-button">Download CSV</button></div>
+      <div class="result-actions"><button type="button" id="print" class="secondary-button" data-umami-event="print-rota">Print the rota</button><button type="button" id="download" class="secondary-button" data-umami-event="download-csv">Download CSV</button></div>
       <div class="weeks" id="weeks"></div>
     </section>
   </main>
-  <footer><span>RotaLantern</span><p>Made for the messy, shared, everyday work. Your entries stay in this browser tab.</p><a href="#top">Back to top ↑</a></footer>
+  <footer><span>RotaLantern</span><p>Visits and print or download actions are counted. Names and chores stay in this browser tab.</p><a href="#top">Back to top ↑</a></footer>
   <script src="app.js"></script>
 </body>
 </html>
